@@ -13,3 +13,6 @@ for p in packages_folder:
     print('removing', p)
     shutil.rmtree(os.path.join(packages_root, p))
 
+kpm_cache = os.path.join(os.environ['LocalAppData'], 'kpm', 'cache')
+if os.path.exists(kpm_cache):
+    shutil.rmtree(kpm_cache)
