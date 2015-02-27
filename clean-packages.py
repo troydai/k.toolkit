@@ -6,7 +6,11 @@ import os
 import os.path
 import shutil
 
-packages_root = os.path.join(os.environ['HOME'], '.k', 'packages')
+if os.name == 'nt':
+    packages_root = os.path.join(os.environ['HOMEDRIVE'], os.environ['HOMEPATH'], '.k', 'packages')
+elif os.name == 'posix':
+    packages_root = os.path.join(os.environ['HOME'], '.k', 'packages')
+
 packages_folder = os.listdir(packages_root)
 
 for p in packages_folder:
