@@ -19,4 +19,10 @@ for p in packages_folder:
 
 kpm_cache = os.path.join(os.environ['LocalAppData'], 'kpm', 'cache')
 if os.path.exists(kpm_cache):
+    print('removing', kpm_cache)
     shutil.rmtree(kpm_cache)
+
+nuget_cache = os.path.join(os.environ['LocalAppData'], 'NuGet', 'Cache')
+if os.path.exists(nuget_cache):
+    print('removing', nuget_cache)
+    shutil.rmtree(nuget_cache)

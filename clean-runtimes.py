@@ -10,6 +10,7 @@ runtime_root = os.path.join(os.environ['HOME'], '.dnx', 'runtimes')
 runtime_folders = os.listdir(runtime_root)
 
 for r in runtime_folders:
-    print('removing', r)
-    shutil.rmtree(os.path.join(runtime_root, r))
+    if not r.endswith('dev'):
+        print('removing', r)
+        shutil.rmtree(os.path.join(runtime_root, r))
 
