@@ -24,10 +24,10 @@ if os.name == 'nt':
 elif os.name == 'posix':
     local_app_data = '~/.local/share/'
 
-dnx_cache = os.path.join(local_app_data, 'kpm', 'cache')
-if os.path.exists(dnx_cache):
-    print('removing', dnx_cache)
-    shutil.rmtree(dnx_cache)
+dnu_cache = os.path.join(local_app_data, 'dnu', 'cache')
+if os.path.exists(dnu_cache):
+    print('removing', dnu_cache)
+    shutil.rmtree(dnu_cache)
 
 nuget_cache = os.path.join(local_app_data, 'NuGet', 'Cache')
 if os.path.exists(nuget_cache):
