@@ -1,0 +1,26 @@
+﻿{
+  "version": "1.0.0-*",
+  "description": "VersionAligner Console Application",
+  "authors": [ "troyd" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+  "compilationOptions": { "emitEntryPoint": true },
+  "dependencies": {
+    "Microsoft.DotNet.ProjectModel": "1.0.0-*"
+  },
+  "commands": { "VersionAligner": "VersionAligner" },
+  "name": "va",
+  "frameworks": {
+    "dnxcore50": {
+      "dependencies": {
+        "Microsoft.CSharp": "4.0.1-*",
+        "System.Collections": "4.0.11-*",
+        "System.Console": "4.0.0-*",
+        "System.Linq": "4.0.1-*",
+        "System.Threading": "4.0.11-*",
+        "System.IO.FileSystem": "4.0.1-*"
+      }
+    }
+  }
+}

@@ -52,3 +52,16 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# VS and C# projects
+bin/
+obj/
+*.suo
+*.user
+project.lock.json
+
+# VIM
+*~
+*.swp
+
+

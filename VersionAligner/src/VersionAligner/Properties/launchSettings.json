@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "VersionAligner": {
+      "commandName": "VersionAligner",
+      "commandLineArgs": "D:\\dev\\omnisharp-roslyn"
+    }
+  }
+}
