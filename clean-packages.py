@@ -21,6 +21,18 @@ for p in packages_folder:
     print('removing', p)
     shutil.rmtree(os.path.join(packages_root, p), False, deleteResolution)
 
+if os.name == 'nt':
+    packages_root = os.path.join(os.environ['HOMEDRIVE'], os.environ['HOMEPATH'], '.nuget', 'packages')
+elif os.name == 'posix':
+    packages_root = os.path.join(os.environ['HOME'], '.nuget', 'packages')
+
+packages_folder = os.listdir(packages_root)
+
+for p in packages_folder:
+    print('removing', p)
+    shutil.rmtree(os.path.join(packages_root, p), False, deleteResolution)
+
+
 # clean kpm/dnu caches
 if os.name == 'nt':
     local_app_data = os.environ['LocalAppData']
