@@ -32,7 +32,6 @@ for p in packages_folder:
     print('removing', p)
     shutil.rmtree(os.path.join(packages_root, p), False, deleteResolution)
 
-
 # clean kpm/dnu caches
 if os.name == 'nt':
     local_app_data = os.environ['LocalAppData']
@@ -44,7 +43,7 @@ if os.path.exists(dnu_cache):
     print('removing', dnu_cache)
     shutil.rmtree(dnu_cache, False, deleteResolution)
 
-nuget_cache = os.path.join(local_app_data, 'NuGet', 'Cache')
+nuget_cache = os.path.join(local_app_data, 'NuGet', 'v3-cache')
 if os.path.exists(nuget_cache):
     print('removing', nuget_cache)
     shutil.rmtree(nuget_cache)
